@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1700114375 source:d:\c program\lab12\lab12\1.c
+	<stdio.h>
+
+1700114708 source:d:\c program\lab12\lab12\1.2.c
+	<stdio.h>
+
+1700146804 source:d:\c program\lab12\lab12\3.c
+	<stdio.h>
+	<stdlib.h>
+
+1700146896 source:d:\c program\lab12\lab12\4.c
+	<stdio.h>
+	<stdlib.h>
+

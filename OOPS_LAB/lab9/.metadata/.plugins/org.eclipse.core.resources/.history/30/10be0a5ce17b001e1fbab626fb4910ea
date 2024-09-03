@@ -1,0 +1,27 @@
+package program;
+
+import java.util.Scanner;
+
+public class main2{
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the console.
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the word to replace and the repeating character.
+        System.out.println("Enter the word to replace:");
+        String wordToReplace = scanner.nextLine();
+
+        System.out.println("Enter the repeating character:");
+        char repeatingCharacter = scanner.next().charAt(0);
+
+        // Create a regular expression to match the word to replace.
+        String regex = "\\b" + wordToReplace + "\\b";
+
+        // Replace all occurrences of the word to replace with the repeating character.
+        String replacedString = scanner.nextLine().replaceAll(regex, repeatingCharacter);
+
+        // Display the replaced string.
+        System.out.println("The replaced string is:");
+        System.out.println(replacedString);
+    }
+}

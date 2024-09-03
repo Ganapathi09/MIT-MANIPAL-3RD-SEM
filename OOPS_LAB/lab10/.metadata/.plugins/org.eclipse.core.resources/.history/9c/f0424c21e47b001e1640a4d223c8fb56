@@ -1,0 +1,26 @@
+package program;
+
+
+import java.util.Scanner;
+
+public class main2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        int[] array = new int[size];
+
+        try {
+            // Attempt to access an element outside the array's bounds
+            array[size] = 10; // This will throw an ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Handle ArrayIndexOutOfBoundsException
+            System.out.println("Array index out of bounds! Please enter a valid index.");
+            System.out.println("Error message: " + e.getMessage());
+        }
+
+        scanner.close();
+    }
+}

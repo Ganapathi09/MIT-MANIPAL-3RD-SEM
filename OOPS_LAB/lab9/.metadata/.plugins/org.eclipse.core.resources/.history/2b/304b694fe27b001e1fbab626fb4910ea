@@ -1,0 +1,111 @@
+package program;
+
+import java.util.Scanner;
+
+public class main4 {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the console.
+        Scanner scanner = new Scanner(System.in);
+
+        // Display the menu.
+        System.out.println("Menu:");
+        System.out.println("1. Compare two strings");
+        System.out.println("2. Convert uppercase character to lower and vice-versa");
+        System.out.println("3. Display whether an entered string is a substring of the other or not");
+        System.out.println("4. Replace the substring with \"Hello\"");
+        System.out.println("Enter your choice:");
+
+        // Get the user's choice.
+        int choice = scanner.nextInt();
+
+        // Perform the selected operation.
+        switch (choice) {
+            case 1:
+                compareStrings(scanner);
+                break;
+            case 2:
+                convertCase(scanner);
+                break;
+            case 3:
+                checkSubstring(scanner);
+                break;
+            case 4:
+                replaceSubstring(scanner);
+                break;
+            default:
+                System.out.println("Invalid choice.");
+                break;
+        }
+    }
+
+    private static void compareStrings(Scanner scanner) {
+        // Prompt the user to enter the two strings.
+        System.out.println("Enter the first string:");
+        String string1 = scanner.nextLine();
+
+        System.out.println("Enter the second string:");
+        String string2 = scanner.nextLine();
+
+        // Compare the two strings.
+        if (string1.equals(string2)) {
+            System.out.println("The two strings are equal.");
+        } else {
+            System.out.println("The two strings are not equal.");
+        }
+    }
+
+    private static void convertCase(Scanner scanner) {
+        // Prompt the user to enter the string and its case.
+        System.out.println("Enter the string:");
+        String string = scanner.nextLine();
+
+        System.out.println("Enter the case (upper or lower):");
+        String caseType = scanner.nextLine();
+
+        // Convert the string to the specified case.
+        if (caseType.equals("upper")) {
+            string = string.toUpperCase();
+        } else if (caseType.equals("lower")) {
+            string = string.toLowerCase();
+        } else {
+            System.out.println("Invalid case type.");
+            return;
+        }
+
+        // Display the converted string.
+        System.out.println("The converted string is:");
+        System.out.println(string);
+    }
+
+    private static void checkSubstring(Scanner scanner) {
+        // Prompt the user to enter the two strings.
+        System.out.println("Enter the first string:");
+        String string1 = scanner.nextLine();
+
+        System.out.println("Enter the second string:");
+        String string2 = scanner.nextLine();
+
+        // Check if the second string is a substring of the first string.
+        if (string1.contains(string2)) {
+            System.out.println("The second string is a substring of the first string.");
+        } else {
+            System.out.println("The second string is not a substring of the first string.");
+        }
+    }
+
+    private static void replaceSubstring(Scanner scanner) {
+        // Prompt the user to enter the two strings.
+        System.out.println("Enter the first string:");
+        String string1 = scanner.nextLine();
+
+        System.out.println("Enter the second string:");
+        String string2 = scanner.nextLine();
+
+        // Replace the second string with "Hello" in the first string.
+        string1 = string1.replace(string2, "Hello");
+
+        // Display the replaced string.
+        System.out.println("The replaced string is:");
+        System.out.println(string1);
+    }
+}

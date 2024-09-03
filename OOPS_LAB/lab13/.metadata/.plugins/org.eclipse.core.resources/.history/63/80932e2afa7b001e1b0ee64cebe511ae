@@ -1,0 +1,26 @@
+package application;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+public class main133 extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        Text text = new Text("Hello, JavaFX!"); // Creating a Text object with the message
+        StackPane root = new StackPane();
+        root.getChildren().add(text); // Adding the Text object to the StackPane
+
+        Scene scene = new Scene(root, 300, 200); // Creating a Scene with the StackPane, width, and height
+
+        primaryStage.setTitle("JavaFX Application"); // Setting the title of the Stage
+        primaryStage.setScene(scene); // Setting the Scene to the Stage
+        primaryStage.show(); // Displaying the Stage
+    }
+
+    public static void main(String[] args) {
+        launch(args); // Launching the JavaFX application
+    }
+}
